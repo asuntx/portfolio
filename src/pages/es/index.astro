@@ -1,0 +1,30 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromURl, useTranslations } from "../../i18n/utils";
+import Navbar from "../../components/Navbar.astro";
+import Presentation from "../../components/Presentation.astro";
+import Links from "../../components/Links.astro";
+import Projects from "../../components/Projects.astro";
+import Footer from "../../components/Footer.astro";
+
+const lang = getLangFromURl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout>
+  <Navbar
+    homeText={t("nav.home")}
+    projectText={t("nav.projects")}
+    contactText={t("nav.contact")}
+  />
+  <Presentation name={t("name")} />
+  <Links resume={t("resume")} />
+  <Projects
+    projectsTitle={t("projects-title")}
+    description1=""
+    description2=""
+    description3=""
+  />
+  <Footer links={t("links")} link1={t("link1")} link2={t("link2")} />
+</Layout>

@@ -1,0 +1,20 @@
+---
+const { homeText, projectText, contactText } = Astro.props;
+---
+
+<header
+  class="flex justify-around p-4 w-fulls border border-b-accent border-x-0 border-t-0"
+>
+  <a
+    class="font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+    href="#home">{homeText}</a
+  >
+  <a
+    class="font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+    href="#projects">{projectText}</a
+  >
+  <a
+    class="font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+    href="#contact">{contactText}</a
+  >
+</header>

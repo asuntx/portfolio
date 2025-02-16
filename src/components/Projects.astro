@@ -1,0 +1,134 @@
+---
+const { projectsTitle, description1, description2, description3 } = Astro.props;
+---
+
+<section id="projects" class="my-12 px-4">
+  <div class="mb-12"><h2 class="font-bold text-2xl">{projectsTitle}</h2></div>
+  <div class="flex flex-col items-center text-background gap-7">
+    <div class="project flex gap-3">
+      <a
+        class="flex justify-center items-center relative group/project1"
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          class="project1 group-hover/project1:opacity-80 rounded-lg p-3 background1 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
+        >
+        </div>
+        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
+          <h3>UPTAEB Website</h3>
+          <p>{description2}</p>
+        </div>
+      </a>
+    </div>
+    <div class="project flex gap-3">
+      <a
+        class="flex justify-center items-center relative group/project2"
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          class="project2 group-hover/project2:opacity-80 rounded-lg p-3 background2 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
+        >
+        </div>
+        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
+          <h3>Infinix Blog</h3>
+          <p>{description2}</p>
+        </div>
+      </a>
+    </div>
+    <div class="project flex gap-3">
+      <a
+        class="flex justify-center items-center relative group/project3"
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          class="project3 group-hover/project3:opacity-80 rounded-lg p-3 background3 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
+        >
+        </div>
+        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
+          <h3>Person I Saw</h3>
+
+          <p>{description2}</p>
+        </div>
+        <div
+          class="see-preview absolute top-5 right-6 group-hover/project3:opacity-100 opacity-0 transition-all duration-300 ease-in-out"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-eye"
+            ><path
+              d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+            ></path><circle cx="12" cy="12" r="3"></circle></svg
+          >
+        </div>
+        <div
+          class="group-hover/project3:opacity-100 flex opacity-0 transition-all duration-300 ease-in-out items-center justify-center"
+        >
+          <button
+            class="absolute flex items-center justify-center gap-2 text-center bg-accent border border-background rounded-xl px-3 py-2"
+          >
+            Preview <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-external-link"
+                ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
+                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                ></path></svg
+              ></span
+            >
+          </button>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .background1 {
+    background: url(/src/assets/pBackground1.webp);
+    background-size: cover;
+  }
+  .background2 {
+    background: url(/src/assets/pBackground2.webp);
+    background-size: cover;
+  }
+  .background3 {
+    background: url(/src/assets/pBackground3.webp);
+    background-size: cover;
+  }
+  .project1,
+  .project2,
+  .project3 {
+    background-size: 100%;
+    transition:
+      background-size 300ms ease-in-out,
+      opacity 300ms ease-in-out;
+  }
+
+  .project a:hover .project1,
+  .project a:hover .project2,
+  .project a:hover .project3 {
+    background-size: 108%;
+  }
+</style>

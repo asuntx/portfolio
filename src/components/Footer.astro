@@ -1,0 +1,46 @@
+---
+const { links, link1, link2, socials, contact } = Astro.props;
+---
+
+<footer id="contact" class="flex flex-col bg-secondary">
+  <div class="flex flex-col alig">
+    <span>{links}</span>
+    <ul>
+      <li>{link1}</li>
+      <li>{link2}</li>
+    </ul>
+    <div class="flex flex-col">
+      <span>{socials}</span>
+      <ul>
+        <li>
+          <a
+            href="http://github.com/Asunt70"
+            target="_blank"
+            rel="noopener noreferrer">Github</a
+          >
+        </li>
+        <li>
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            >Linkedin</a
+          >
+        </li>
+        <li>
+          <a
+            href="http://instagram.com/sebasdaa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram</a
+          >
+        </li>
+      </ul>
+      <div>
+        <span>{contact}</span>
+        <ul>
+          <li><a href="mailto:sebaj348@gmail.com">sebaj348@gmail.com</a></li>
+          <li><a href="">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

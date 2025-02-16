@@ -1,0 +1,14 @@
+---
+const { imgAlt, name } = Astro.props;
+---
+
+<section class="mt-8 p-4 flex flex-col items-center md:flex-row gap-5">
+  <img
+    class="blur-[2px] w-46 h-46 rounded-full object-cover"
+    src="https://sebastianfigueroa.vercel.app/_next/image?url=%2Fme.webp&w=1920&q=75"
+    alt={imgAlt}
+  />
+  <div class="flex justify-center w-[60%]">
+    <h1 class="font-bold text-3xl text-center">{name}</h1>
+  </div>
+</section>

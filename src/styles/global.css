@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@theme {
+  --color-background: #050401;
+  --color-primary: #bbb;
+  --color-accent: #b2f2bb;
+  --color-secondary: #303036;
+  --font-body: "quicksand", sans-serif;
+  --breakpoint-custom: 1440px;
+}
