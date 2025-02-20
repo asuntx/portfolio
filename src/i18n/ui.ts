@@ -21,6 +21,8 @@ export const ui = {
     "link2": "Proyects",
     "socials": "Socials",
     "contact": "Contact",
+    "resume-file": "/resume.pdf",
+    "hire": "HIRE"
   },
   es: {
     "name": "Sebastián Figueroa",
@@ -40,6 +42,8 @@ export const ui = {
     "link2": "Proyectos",
     "socials": "Redes",
     "contact": "Contacto",
+    "resume-file": "/curriculum.pdf",
+    "hire": "Contrátame"
 
   },
 } as const;

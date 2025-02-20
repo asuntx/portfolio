@@ -1,5 +1,5 @@
 ---
-const { homeText, projectText, contactText } = Astro.props;
+const { resumeFile, hire } = Astro.props;
 ---
 
 <header
@@ -76,10 +76,35 @@ const { homeText, projectText, contactText } = Astro.props;
     </nav>
     <div class="flex gap-2 sm:gap-3">
       <a
-        href=""
-        class="py-1.5 px-5 border-2 border-accent rounded-xl mr-2 lg:mr-3">CV</a
+        href={resumeFile}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="py-1.5 flex gap-1.5 px-5 border-2 border-accent rounded-xl mr-2 lg:mr-3"
       >
-      <a href="" class="py-1.5 px-5 border-2 border-accent rounded-xl">Hire</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-file-text"
+          ><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+          ></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"
+          ></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg
+        ><span class="font-bold">CV</span>
+      </a>
+      <a
+        class="py-1.5 px-5 border-2 border-accent rounded-xl mr-2 lg:mr-3"
+        href="http://linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="font-bold">{hire}</span></a
+      >
     </div>
   </div>
 </header>
