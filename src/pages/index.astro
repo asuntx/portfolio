@@ -8,16 +8,10 @@ import Layout from "../layouts/Layout.astro";
 import { getLangFromURl, useTranslations } from "../i18n/utils";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Navbar
-    homeText={t("nav.home")}
-    projectText={t("nav.projects")}
-    contactText={t("nav.contact")}
-  />
+  <Navbar />
   <Presentation name={t("name")} />
   <Links resume={t("resume")} />
   <Projects
@@ -26,5 +20,11 @@ const t = useTranslations(lang);
     description2=""
     description3=""
   />
-  <Footer links={t("links")} link1={t("link1")} link2={t("link2")} />
+  <Footer
+    links={t("links")}
+    link1={t("link1")}
+    link2={t("link2")}
+    socials={t("socials")}
+    contact={t("contact")}
+  />
 </Layout>

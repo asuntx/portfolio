@@ -5,6 +5,7 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
 <section id="projects" class="my-12 px-4">
   <div class="mb-12"><h2 class="font-bold text-2xl">{projectsTitle}</h2></div>
   <div class="flex flex-col items-center text-background gap-7">
+    <!-- Project 1 -->
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project1"
@@ -17,11 +18,43 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
         >
         </div>
         <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <h3>UPTAEB Website</h3>
+          <div class="relative flex items-center justify-center">
+            <h3
+              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
+            >
+              UPTAEB Website
+            </h3>
+            <h3
+              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
+            >
+              Preview <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-square-arrow-out-up-right"
+                >
+                  <path
+                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <path d="m21 3-9 9"></path>
+                  <path d="M15 3h6v6"></path>
+                </svg>
+              </span>
+            </h3>
+          </div>
           <p>{description2}</p>
         </div>
       </a>
     </div>
+
+    <!-- Project 2 -->
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project2"
@@ -34,11 +67,43 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
         >
         </div>
         <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <h3>Infinix Blog</h3>
+          <div class="relative flex items-center justify-center">
+            <h3
+              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
+            >
+              Infinix Blog
+            </h3>
+            <h3
+              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
+            >
+              Preview <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-square-arrow-out-up-right"
+                >
+                  <path
+                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <path d="m21 3-9 9"></path>
+                  <path d="M15 3h6v6"></path>
+                </svg>
+              </span>
+            </h3>
+          </div>
           <p>{description2}</p>
         </div>
       </a>
     </div>
+
+    <!-- Project 3 -->
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project3"
@@ -51,8 +116,37 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
         >
         </div>
         <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <h3>Person I Saw</h3>
-
+          <div class="relative flex items-center justify-center">
+            <h3
+              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
+            >
+              Person I Saw
+            </h3>
+            <h3
+              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
+            >
+              Preview <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-square-arrow-out-up-right"
+                >
+                  <path
+                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <path d="m21 3-9 9"></path>
+                  <path d="M15 3h6v6"></path>
+                </svg>
+              </span>
+            </h3>
+          </div>
           <p>{description2}</p>
         </div>
         <div
@@ -69,35 +163,12 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
             stroke-linecap="round"
             stroke-linejoin="round"
             class="lucide lucide-eye"
-            ><path
+          >
+            <path
               d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
-            ></path><circle cx="12" cy="12" r="3"></circle></svg
-          >
-        </div>
-        <div
-          class="group-hover/project3:opacity-100 flex opacity-0 transition-all duration-300 ease-in-out items-center justify-center"
-        >
-          <button
-            class="absolute flex items-center justify-center gap-2 text-center bg-accent border border-background rounded-xl px-3 py-2"
-          >
-            Preview <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-external-link"
-                ><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path
-                  d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                ></path></svg
-              ></span
-            >
-          </button>
+            ></path>
+            <circle cx="12" cy="12" r="3"></circle>
+          </svg>
         </div>
       </a>
     </div>
@@ -132,3 +203,45 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
     background-size: 108%;
   }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const projectAnchors = document.querySelectorAll(".project a");
+
+    projectAnchors.forEach((anchor) => {
+      const personTitle = anchor.querySelector(".person-title");
+      const previewTitle = anchor.querySelector(".preview-title");
+      if (!personTitle || !previewTitle) return;
+
+      let hoverTimeout;
+
+      anchor.addEventListener("mouseenter", () => {
+        clearTimeout(hoverTimeout);
+
+        // Fade out the main title immediately
+        personTitle.classList.remove("opacity-100");
+        personTitle.classList.add("opacity-0");
+
+        // After a slight delay, fade in the Preview text
+        hoverTimeout = setTimeout(() => {
+          previewTitle.classList.remove("opacity-0");
+          previewTitle.classList.add("opacity-100");
+        }, 300);
+      });
+
+      anchor.addEventListener("mouseleave", () => {
+        clearTimeout(hoverTimeout);
+
+        // Fade out the Preview text immediately
+        previewTitle.classList.remove("opacity-100");
+        previewTitle.classList.add("opacity-0");
+
+        // After a slight delay, bring back the main title
+        hoverTimeout = setTimeout(() => {
+          personTitle.classList.remove("opacity-0");
+          personTitle.classList.add("opacity-100");
+        }, 300);
+      });
+    });
+  });
+</script>
