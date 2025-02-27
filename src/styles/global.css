@@ -7,7 +7,8 @@ body {
 }
 
 @theme {
-  --animate-fill: fill 1s ease-in-out forwards;
+  --animate-color: colorChange 5s infinite ease-in-out alternate;
+  --animate-text-color: textColorChange 5s infinite ease-in-out alternate;
   --color-background: #050401;
   --color-background-nav: #050401e7;
   --color-primary: #bbb;
@@ -16,4 +17,34 @@ body {
   --color-text-primary: hsl(0deg 0% 100% / 44%);
   --font-body: "quicksand", sans-serif;
   --breakpoint-custom: 1440px;
+}
+
+@keyframes colorChange {
+    0% {
+      background-color: #000b58;
+    }
+    25% {
+      background-color: #003161;
+    }
+    50% {
+      background-color: #006a67;
+    }
+    100% {
+      background-color: #fff4b7;
+    }
+}
+
+@keyframes textColorChange {
+  0% {
+    color: #ffffff;
+  }
+  25% {
+    color: #ffffffcb;
+  }
+  50% {
+    color: #0c0c0c;
+  }
+  100% {
+    color: #000000;
+  }
 }
