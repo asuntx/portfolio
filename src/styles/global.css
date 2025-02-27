@@ -7,6 +7,7 @@ body {
 }
 
 @theme {
+  --animate-fill: fill 1s ease-in-out forwards;
   --color-background: #050401;
   --color-background-nav: #050401e7;
   --color-primary: #bbb;

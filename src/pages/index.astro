@@ -13,13 +13,8 @@ const t = useTranslations(lang);
 <Layout>
   <Navbar resumeFile={t("resume-file")} hire={t("hire")} />
   <Presentation name={t("name")} />
-  <Links resume={t("resume")} />
-  <Projects
-    projectsTitle={t("projects-title")}
-    description1=""
-    description2=""
-    description3=""
-  />
+  <Links resume={t("resume")} resumeFile={t("resume-file")} />
+  <Projects projectsTitle={t("projects-title")} view={t("view")} />
   <Footer
     links={t("links")}
     link1={t("link1")}

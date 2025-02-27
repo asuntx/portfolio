@@ -1,15 +1,15 @@
 ---
-const { projectsTitle, description1, description2, description3 } = Astro.props;
+const { projectsTitle, view } = Astro.props;
 ---
 
-<section id="projects" class="my-12 px-4">
+<section id="projects" class="pt-24 px-4">
   <div class="mb-12"><h2 class="font-bold text-2xl">{projectsTitle}</h2></div>
   <div class="flex flex-col items-center text-background gap-7">
     <!-- Project 1 -->
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project1"
-        href="https://google.com"
+        href="https://uptaeb-website.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -27,7 +27,8 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
             <h3
               class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
             >
-              Preview <span>
+              {view}
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -49,7 +50,6 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
               </span>
             </h3>
           </div>
-          <p>{description2}</p>
         </div>
       </a>
     </div>
@@ -58,7 +58,7 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project2"
-        href="https://google.com"
+        href="https://infinix-blog.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -76,7 +76,8 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
             <h3
               class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
             >
-              Preview <span>
+              {view}
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -98,7 +99,6 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
               </span>
             </h3>
           </div>
-          <p>{description2}</p>
         </div>
       </a>
     </div>
@@ -107,7 +107,7 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
     <div class="project flex gap-3">
       <a
         class="flex justify-center items-center relative group/project3"
-        href="https://google.com"
+        href="https://person-i-saw.vercel.app"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -125,7 +125,8 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
             <h3
               class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
             >
-              Preview <span>
+              {view}
+              <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -147,7 +148,6 @@ const { projectsTitle, description1, description2, description3 } = Astro.props;
               </span>
             </h3>
           </div>
-          <p>{description2}</p>
         </div>
       </a>
     </div>

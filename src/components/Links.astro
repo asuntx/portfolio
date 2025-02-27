@@ -1,8 +1,8 @@
 ---
-const { resume } = Astro.props;
+const { resume, resumeFile } = Astro.props;
 ---
 
-<div class="mt-5 px-4 flex w-full gap-3">
+<div class="mt-5 px-4 flex justify-center lg:justify-start w-full gap-3">
   <a
     class="hover:border-accent transition-colors duration-150 ease-in-out flex items-center justify-center px-4 py-2 border rounded-lg bg-background"
     href="http://github.com/Asunt70"
@@ -28,7 +28,7 @@ const { resume } = Astro.props;
   </a>
   <a
     class="hover:border-accent transition-colors duration-150 ease-in-out flex items-center justify-center px-4 py-2 border rounded-lg bg-background"
-    href="http://"
+    href="https://www.linkedin.com/in/sebasti%C3%A1n-figueroa-barco-649981261/"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -73,7 +73,7 @@ const { resume } = Astro.props;
   </a>
   <a
     class="hover:border-accent transition-colors duration-150 ease-in-out flex gap-2 items-center justify-center px-4 py-2 border rounded-lg bg-background"
-    href="/resume.pdf"
+    href={resumeFile}
     target="_blank"
     rel="noopener noreferrer"
   >
