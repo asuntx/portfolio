@@ -1,15 +1,17 @@
 ---
 const { imgAlt, name } = Astro.props;
+import { Image } from "astro:assets";
+import me from "../assets/me.webp";
 ---
 
 <section id="home" class="px-5 pb-5 pt-24">
   <div
-    class="bg-[url(/background.webp)] w-full lg:w-[90%] px-5 py-5 bg-cover bg-no-repeat rounded-lg"
+    class="bg-[url(/src/assets/background.webp)] w-full lg:w-[90%] px-5 py-5 bg-cover bg-no-repeat rounded-lg"
   >
     <div class="flex flex-col items-center md:flex-row gap-5">
-      <img
+      <Image
         class="w-46 h-46 rounded-full object-cover"
-        src="/me.webp"
+        src={me}
         alt={imgAlt}
       />
       <div class="flex flex-col justify-center w-[60%]">

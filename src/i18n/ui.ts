@@ -24,6 +24,7 @@ export const ui = {
     "resume-file": "/resume.pdf",
     "hire": "HIRE",
     "view": "View",
+    "imgAlt": "developer's photo"
   },
   es: {
     "name": "Sebastián Figueroa",
@@ -46,6 +47,8 @@ export const ui = {
     "resume-file": "/curriculum.pdf",
     "hire": "Contráta",
     "view": "Ver",
+    "imgAlt": "foto del desarrollador"
+
 
   },
 } as const;
