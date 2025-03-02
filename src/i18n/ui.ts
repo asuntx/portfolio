@@ -9,13 +9,11 @@ export const ui = {
   en: {
     "name": "Sebastian Figueroa",
     "profession": "Front-end Developer",
-    "about-title": "Me",
-    "about": "i like stuff",
     "projects-title": "Projects",
     "description1": "redesigned university website",
     "description2": "a tech blog",
     "description3": "searching people plaftorm",
-    "resume": "Resume",
+    "resume": "CV",
     "links": "Links",
     "link1": "Home",
     "link2": "Proyects",
@@ -24,16 +22,13 @@ export const ui = {
     "resume-file": "/resume.pdf",
     "hire": "HIRE",
     "view": "View",
-    "imgAlt": "developer's photo"
+    "imgAlt": "developer's photo",
+    "language": "ES",
+    "pageLanguage": "/es"
   },
   es: {
     "name": "Sebastián Figueroa",
     "profession": "Desarrollador Front-end",
-    "nav.home": "Inicio",
-    "nav.projects": "Proyectos",
-    "nav.contact": "Contacto",
-    "about-title": "Sobre mí",
-    "about": "me gustan cosas",
     "projects-title": "Proyectos",
     "description1": "pagina de la universidad rediseñada",
     "description2": "un blog sobre tecnologia",
@@ -47,8 +42,9 @@ export const ui = {
     "resume-file": "/curriculum.pdf",
     "hire": "Contráta",
     "view": "Ver",
-    "imgAlt": "foto del desarrollador"
-
+    "imgAlt": "foto del desarrollador",
+    "language": "EN",
+    "pageLanguage": "/"
 
   },
 } as const;

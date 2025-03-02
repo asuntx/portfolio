@@ -11,7 +11,12 @@ const t = useTranslations(lang);
 ---
 
 <Layout>
-  <Navbar resumeFile={t("resume-file")} hire={t("hire")} />
+  <Navbar
+    resumeFile={t("resume-file")}
+    hire={t("hire")}
+    language={t("language")}
+    pageLanguage={t("pageLanguage")}
+  />
   <Presentation name={t("name")} imgAlt={t("imgAlt")} />
   <Links resume={t("resume")} resumeFile={t("resume-file")} />
   <Projects projectsTitle={t("projects-title")} view={t("view")} />
