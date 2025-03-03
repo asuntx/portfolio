@@ -40,7 +40,7 @@ export const ui = {
     "socials": "Redes",
     "contact": "Contacto",
     "resume-file": "/curriculum.pdf",
-    "hire": "Contráta",
+    "hire": "EMPLEA",
     "view": "Ver",
     "imgAlt": "foto del desarrollador",
     "language": "EN",

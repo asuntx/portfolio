@@ -1,5 +1,5 @@
 ---
-const { resumeFile, hire, language, pageLanguage } = Astro.props;
+const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
 ---
 
 <header
@@ -92,7 +92,7 @@ const { resumeFile, hire, language, pageLanguage } = Astro.props;
         href={resumeFile}
         target="_blank"
         rel="noopener noreferrer"
-        class="py-1.5 flex gap-1.5 px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3"
+        class="py-1.5 flex gap-1.5 px-2 sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const { resumeFile, hire, language, pageLanguage } = Astro.props;
         <span class="font-bold">CV</span>
       </a>
       <a
-        class="animate-color py-1.5 px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3"
+        class=`animate-color py-1.5 ${padding} sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3`
         href="http://linkedin"
         target="_blank"
         rel="noopener noreferrer"
