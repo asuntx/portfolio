@@ -1,12 +1,11 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getLangFromURl, useTranslations } from "../../i18n/utils";
 import Navbar from "../../components/Navbar.astro";
-import Presentation from "../../components/Presentation.astro";
-import Links from "../../components/Links.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/about.astro";
 import Projects from "../../components/Projects.astro";
 import Footer from "../../components/Footer.astro";
-
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromURl, useTranslations } from "../../i18n/utils";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -17,10 +16,22 @@ const t = useTranslations(lang);
     hire={t("hire")}
     language={t("language")}
     pageLanguage={t("pageLanguage")}
-    padding="px-1.5"
+    padding="px-2"
   />
-  <Presentation name={t("name")} imgAlt={t("imgAlt")} />
-  <Links resume={t("resume")} resumeFile={t("resume-file")} />
+  <Hero name={t("name")} imgAlt={t("imgAlt")} />
+  <About>
+    Amante del rock <span class="font-serif">🎸</span> y techie <span
+      class="font-serif">👨‍💻</span
+    >. Me gustan los diseños mininalistas y limpios, cómodo para la mayoría de
+    usuarios, e increibles para sus ojos<span class="font-serif">😌👀.</span> Quiero
+    contribuir al mundo! Checa mi futuro proyecto: <a
+      class="text-teal-500 hover:text-stone-500 transition-colors duration-100 ease-in-out"
+      href="http://zeta.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer">zeta app</a
+    > la red social para desarrolladores!
+  </About>
+
   <Projects projectsTitle={t("projects-title")} view={t("view")} />
   <Footer
     links={t("links")}

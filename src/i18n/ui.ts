@@ -24,7 +24,7 @@ export const ui = {
     "view": "View",
     "imgAlt": "developer's photo",
     "language": "ES",
-    "pageLanguage": "/es"
+    "pageLanguage": "/es",
   },
   es: {
     "name": "Sebastián Figueroa",
@@ -44,7 +44,6 @@ export const ui = {
     "view": "Ver",
     "imgAlt": "foto del desarrollador",
     "language": "EN",
-    "pageLanguage": "/"
-
+    "pageLanguage": "/",
   },
 } as const;
