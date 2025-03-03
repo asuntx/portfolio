@@ -1,226 +1,33 @@
 ---
+import Project from "./Project.astro";
 const { projectsTitle, view } = Astro.props;
+import { getLangFromURl, useTranslations } from "../i18n/utils";
+const lang = getLangFromURl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section id="projects" class="pt-20 px-4">
-  <div class="mb-12"><h2 class="font-bold text-2xl">{projectsTitle}</h2></div>
-  <div class="flex flex-col items-center text-background gap-7">
-    <!-- Project 1 -->
-    <div class="project flex gap-3">
-      <a
-        class="flex justify-center items-center relative group/project1"
-        href="https://uptaeb-website.vercel.app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div
-          class="project1 group-hover/project1:opacity-80 rounded-lg p-3 background1 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
-        >
-        </div>
-        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <div class="relative flex items-center justify-center">
-            <h3
-              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
-            >
-              UPTAEB Website
-            </h3>
-            <h3
-              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
-            >
-              {view}
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-square-arrow-out-up-right"
-                >
-                  <path
-                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <path d="m21 3-9 9"></path>
-                  <path d="M15 3h6v6"></path>
-                </svg>
-              </span>
-            </h3>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project flex gap-3">
-      <a
-        class="flex justify-center items-center relative group/project2"
-        href="https://infinix-blog.vercel.app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div
-          class="project2 group-hover/project2:opacity-80 rounded-lg p-3 background2 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
-        >
-        </div>
-        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <div class="relative flex items-center justify-center">
-            <h3
-              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
-            >
-              Infinix Blog
-            </h3>
-            <h3
-              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
-            >
-              {view}
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-square-arrow-out-up-right"
-                >
-                  <path
-                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <path d="m21 3-9 9"></path>
-                  <path d="M15 3h6v6"></path>
-                </svg>
-              </span>
-            </h3>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project flex gap-3">
-      <a
-        class="flex justify-center items-center relative group/project3"
-        href="https://person-i-saw.vercel.app"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <div
-          class="project3 group-hover/project3:opacity-80 rounded-lg p-3 background3 min-w-3xs h-60 sm:min-w-xs md:min-w-md lg:min-w-lg sm:min-h-64 md:min-h-80 lg:min-h-96"
-        >
-        </div>
-        <div class="absolute text-stone-900 font-bold font-mono text-2xl">
-          <div class="relative flex items-center justify-center">
-            <h3
-              class="person-title transition-opacity duration-300 delay-100 ease-in-out opacity-100"
-            >
-              Person I Saw
-            </h3>
-            <h3
-              class="preview-title absolute flex gap-3 items-center transition-opacity duration-300 delay-100 ease-in-out opacity-0"
-            >
-              {view}
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-square-arrow-out-up-right"
-                >
-                  <path
-                    d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
-                  ></path>
-                  <path d="m21 3-9 9"></path>
-                  <path d="M15 3h6v6"></path>
-                </svg>
-              </span>
-            </h3>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+  <h2 class="font-bold text-2xl">{projectsTitle}</h2>
+  <ul class="flex flex-col items-center text-background gap-7">
+    <li>
+      <Project
+        projectLink="https://uptaeb-website.vercel.app"
+        projectTitle="Uptaeb Website"
+        view={t("view")}
+        background="bg-[url(src/assets/pBackground1.webp)]"
+      />
+      <Project
+        projectLink="https://infinix-blog.vercel.app"
+        projectTitle="Infinix Blog"
+        view={t("view")}
+        background="bg-[url(src/assets/pBackground2.webp)]"
+      />
+      <Project
+        projectLink="https://person-i-saw.vercel.app"
+        projectTitle="Person I Saw"
+        view={t("view")}
+        background="bg-[url(src/assets/pBackground3.webp)]"
+      />
+    </li>
+  </ul>
 </section>
-
-<style>
-  .background1 {
-    background: url(/src/assets/pBackground1.webp);
-    background-size: cover;
-  }
-  .background2 {
-    background: url(/src/assets/pBackground2.webp);
-    background-size: cover;
-  }
-  .background3 {
-    background: url(/src/assets/pBackground3.webp);
-    background-size: cover;
-  }
-  .project1,
-  .project2,
-  .project3 {
-    background-size: 100%;
-    transition:
-      background-size 300ms ease-in-out,
-      opacity 300ms ease-in-out;
-  }
-
-  .project a:hover .project1,
-  .project a:hover .project2,
-  .project a:hover .project3 {
-    background-size: 108%;
-  }
-</style>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const projectAnchors = document.querySelectorAll(".project a");
-
-    projectAnchors.forEach((anchor) => {
-      const personTitle = anchor.querySelector(".person-title");
-      const previewTitle = anchor.querySelector(".preview-title");
-      if (!personTitle || !previewTitle) return;
-
-      let hoverTimeout;
-
-      anchor.addEventListener("mouseenter", () => {
-        clearTimeout(hoverTimeout);
-
-        // Fade out the main title immediately
-        personTitle.classList.remove("opacity-100");
-        personTitle.classList.add("opacity-0");
-
-        // After a slight delay, fade in the Preview text
-        hoverTimeout = setTimeout(() => {
-          previewTitle.classList.remove("opacity-0");
-          previewTitle.classList.add("opacity-100");
-        }, 300);
-      });
-
-      anchor.addEventListener("mouseleave", () => {
-        clearTimeout(hoverTimeout);
-
-        // Fade out the Preview text immediately
-        previewTitle.classList.remove("opacity-100");
-        previewTitle.classList.add("opacity-0");
-
-        // After a slight delay, bring back the main title
-        hoverTimeout = setTimeout(() => {
-          personTitle.classList.remove("opacity-0");
-          personTitle.classList.add("opacity-100");
-        }, 300);
-      });
-    });
-  });
-</script>
