@@ -3,14 +3,8 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
 ---
 
 <header
-  class="bg-transparent fixed z-10 py-6 px-4 lg:px-8 w-full sm:w-[80%] left-1/2 -translate-x-1/2"
+  class="fixed z-10 py-6 bg-background-nav px-4 lg:px-8 w-full sm:w-[80%] left-1/2 -translate-x-1/2"
 >
-  <!-- Blurred background layer -->
-  <div
-    class="absolute inset-0 -z-10 bg-background-nav bg-opacity-50 blur-[2px]"
-  >
-  </div>
-
   <div class="flex justify-between px-3 sm:px-0 items-center">
     <nav class="flex w-full gap-5 sm:gap-6 lg:gap-9">
       <a
