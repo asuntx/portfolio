@@ -10,7 +10,6 @@ body {
   --animate-color: colorChange 5s infinite ease-in-out alternate;
   --animate-text-color: textColorChange 5s infinite ease-in-out alternate;
   --color-background: #050401;
-  --color-background-nav: #050401f5;
   --color-primary: #bbb;
   --color-accent: #b2f2bb;
   --color-secondary: #303036;

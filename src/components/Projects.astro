@@ -1,33 +1,44 @@
 ---
-import Project from "./Project.astro";
-const { projectsTitle, view } = Astro.props;
 import { getLangFromURl, useTranslations } from "../i18n/utils";
+import Project from "./Project.astro";
+import NextIcon from "./NextIcon.astro";
+import TailwindIcon from "./TailwindIcon.astro";
+const { projectsTitle, view } = Astro.props;
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="projects" class="pt-20 px-4">
+<section id="projects" class="pt-20 px-2 sm:px-4">
   <h2 class="font-bold text-2xl">{projectsTitle}</h2>
-  <ul class="flex flex-col items-center text-background gap-7">
+  <ul class="flex justify-center text-background">
     <li>
       <Project
         projectLink="https://uptaeb-website.vercel.app"
         projectTitle="Uptaeb Website"
         view={t("view")}
         background="bg-[url(src/assets/pBackground1.webp)]"
-      />
+        projectDescription={t("projectDescription1")}
+      >
+        <NextIcon /></Project
+      >
       <Project
         projectLink="https://infinix-blog.vercel.app"
         projectTitle="Infinix Blog"
         view={t("view")}
         background="bg-[url(src/assets/pBackground2.webp)]"
-      />
+        projectDescription={t("projectDescription2")}
+      >
+        <NextIcon />
+      </Project>
       <Project
         projectLink="https://person-i-saw.vercel.app"
         projectTitle="Person I Saw"
         view={t("view")}
         background="bg-[url(src/assets/pBackground3.webp)]"
-      />
+        projectDescription={t("projectDescription3")}
+      >
+        <NextIcon /><TailwindIcon /></Project
+      >
     </li>
   </ul>
 </section>

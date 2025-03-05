@@ -10,9 +10,6 @@ export const ui = {
     "name": "Sebastian Figueroa",
     "profession": "Front-end Developer",
     "projects-title": "Projects",
-    "description1": "redesigned university website",
-    "description2": "a tech blog",
-    "description3": "searching people plaftorm",
     "resume": "CV",
     "links": "Links",
     "link1": "Home",
@@ -25,14 +22,14 @@ export const ui = {
     "imgAlt": "developer's photo",
     "language": "ES",
     "pageLanguage": "/es",
+    "projectDescription1": "UPTAEB University page redesigned",
+    "projectDescription2": "A blog about tech stuff",
+    "projectDescription3": "Searching people website"
   },
   es: {
     "name": "Sebastián Figueroa",
     "profession": "Desarrollador Front-end",
     "projects-title": "Proyectos",
-    "description1": "pagina de la universidad rediseñada",
-    "description2": "un blog sobre tecnologia",
-    "description3": "plataforma para buscar a personas",
     "resume": "Curriculum",
     "links": "Enlaces",
     "link1": "Inicio",
@@ -45,5 +42,8 @@ export const ui = {
     "imgAlt": "foto del desarrollador",
     "language": "EN",
     "pageLanguage": "/",
+    "projectDescription1": "Página de la Universidad UPTAEB rediseñada",
+    "projectDescription2": "Un blog sobre temas tecnológicos",
+    "projectDescription3": "Página para buscar a personas"
   },
 } as const;

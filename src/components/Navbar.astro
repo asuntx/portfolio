@@ -3,10 +3,10 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
 ---
 
 <header
-  class="fixed z-10 py-6 bg-background-nav px-4 lg:px-8 w-full sm:w-[80%] left-1/2 -translate-x-1/2"
+  class="header fixed z-30 py-6 sm:px-4 lg:px-8 w-full left-1/2 -translate-x-1/2"
 >
   <div class="flex justify-between px-3 sm:px-0 items-center">
-    <nav class="flex w-full gap-5 sm:gap-6 lg:gap-9">
+    <nav class="flex w-full gap-3 sm:gap-6 lg:gap-9">
       <a
         class="group/link1 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
         href="#home"
@@ -81,12 +81,12 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
       </a>
     </nav>
 
-    <div class="flex gap-1 sm:gap-2">
+    <div class="flex gap-1.5 sm:gap-2 lg:gap-3">
       <a
         href={resumeFile}
         target="_blank"
         rel="noopener noreferrer"
-        class="py-1.5 flex gap-1.5 px-2 sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3"
+        class="py-1.5 flex items-center gap-1.5 px-2 sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -107,15 +107,17 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
           <path d="M16 13H8"></path>
           <path d="M16 17H8"></path>
         </svg>
-        <span class="font-bold">CV</span>
+        <span class="font-bold text-sm sm:text-base">CV</span>
       </a>
       <a
-        class=`animate-color py-1.5 ${padding} sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg mr-2 lg:mr-3`
+        class=`animate-color py-1.5 ${padding} sm:px-3 border hover:border-accent transition-all duration-150 ease-in-out rounded-lg`
         href="https://www.linkedin.com/in/sebasti%C3%A1n-figueroa-barco-649981261/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span class="animate-text-color font-bold">{hire}</span>
+        <span class="animate-text-color text-sm sm:text-base font-bold"
+          >{hire}</span
+        >
       </a>
       <a
         href={pageLanguage}
@@ -125,3 +127,11 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
     </div>
   </div>
 </header>
+
+<style>
+  .header {
+    background: rgba(5, 4, 1, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+</style>
