@@ -1,4 +1,7 @@
 ---
+import { getLangFromURl, useTranslations } from "../i18n/utils";
+const lang = getLangFromURl(Astro.url);
+const t = useTranslations(lang);
 const { resume, resumeFile } = Astro.props;
 ---
 
@@ -8,6 +11,7 @@ const { resume, resumeFile } = Astro.props;
   <a
     class="hover:bg-stone-800 transition-colors duration-150 ease-in-out flex items-center justify-center px-4 py-2 rounded-lg bg-stone-900"
     href="http://github.com/Asunt70"
+    aria-label={t("githubLabel")}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -31,6 +35,7 @@ const { resume, resumeFile } = Astro.props;
   <a
     class="hover:bg-stone-800 transition-colors duration-150 ease-in-out flex items-center justify-center px-4 py-2 rounded-lg bg-stone-900"
     href="https://www.linkedin.com/in/sebasti%C3%A1n-figueroa-barco-649981261/"
+    aria-label={t("linkedinLabel")}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -54,6 +59,7 @@ const { resume, resumeFile } = Astro.props;
   </a>
   <a
     href="mailto:sebaj348@gmail.com"
+    aria-label={t("mailLabel")}
     target="_blank"
     rel="noopener noreferrer"
     class="hover:bg-stone-800 transition-colors duration-150 ease-in-out flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-stone-900"
@@ -77,6 +83,7 @@ const { resume, resumeFile } = Astro.props;
   <a
     class="hover:bg-stone-800 transition-colors duration-150 ease-in-out flex gap-2 items-center justify-center px-4 py-2 rounded-lg bg-stone-900"
     href={resumeFile}
+    aria-label={t("downloadLabel")}
     target="_blank"
     rel="noopener noreferrer"
   >

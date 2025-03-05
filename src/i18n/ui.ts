@@ -7,6 +7,13 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
+    "homeLabel": "Go to home",
+    "projectsLabel": "Go to projects",
+    "contactLabel": "Go to contact",
+    "githubLabel": "Go to Github",
+    "linkedinLabel": "Go to LinkedIn",
+    "mailLabel": "Send a email",
+    "downloadLabel": "Download Resume",
     "name": "Sebastian Figueroa",
     "profession": "Front-end Developer",
     "projects-title": "Projects",
@@ -27,6 +34,13 @@ export const ui = {
     "projectDescription3": "Searching people website"
   },
   es: {
+    "homeLabel": "Ir a inicio",
+    "projectsLabel": "Ir a proyectos",
+    "contactLabel": "Ir a contacto",
+    "githubLabel": "Ir a Github",
+    "linkedinLabel": "Ir a LinkedIn",
+    "mailLabel": "Enviar un correo",
+    "downloadLabel": "Descargar currículum",
     "name": "Sebastián Figueroa",
     "profession": "Desarrollador Front-end",
     "projects-title": "Proyectos",

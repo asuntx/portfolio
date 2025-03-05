@@ -1,5 +1,8 @@
 ---
+import { getLangFromURl, useTranslations } from "../i18n/utils";
 const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
+const lang = getLangFromURl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <header
@@ -10,6 +13,7 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
       <a
         class="group/link1 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
         href="#home"
+        aria-label={t("homeLabel")}
       >
         <svg
           class="group-hover/link1:stroke-text-primary transition-all duration-150 ease-in-out"
@@ -33,6 +37,7 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
       <a
         class="group/link2 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
         href="#projects"
+        aria-label={t("projectsLabel")}
       >
         <svg
           class="group-hover/link2:stroke-text-primary transition-all duration-150 ease-in-out"
@@ -58,6 +63,7 @@ const { resumeFile, hire, language, pageLanguage, padding } = Astro.props;
       <a
         class="group/link3 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
         href="#contact"
+        aria-label={t("contactLabel")}
       >
         <svg
           class="group-hover/link3:stroke-text-primary transition-all duration-150 ease-in-out"
