@@ -3,6 +3,9 @@ import { getLangFromURl, useTranslations } from "../i18n/utils";
 import Project from "./Project.astro";
 import NextIcon from "./NextIcon.astro";
 import TailwindIcon from "./TailwindIcon.astro";
+import pBackground1 from "../assets/pBackground1.webp";
+import pBackground2 from "../assets/pBackground2.webp";
+import pBackground3 from "../assets/pBackground3.webp";
 const { projectsTitle, view } = Astro.props;
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
@@ -16,7 +19,7 @@ const t = useTranslations(lang);
         projectLink="https://uptaeb-website.vercel.app"
         projectTitle="Uptaeb Website"
         view={t("view")}
-        background="bg-[url(src/assets/pBackground1.webp)]"
+        backgroundImage={pBackground1.src}
         projectDescription={t("projectDescription1")}
       >
         <NextIcon /></Project
@@ -25,7 +28,7 @@ const t = useTranslations(lang);
         projectLink="https://infinix-blog.vercel.app"
         projectTitle="Infinix Blog"
         view={t("view")}
-        background="bg-[url(src/assets/pBackground2.webp)]"
+        backgroundImage={pBackground2.src}
         projectDescription={t("projectDescription2")}
       >
         <NextIcon />
@@ -34,7 +37,7 @@ const t = useTranslations(lang);
         projectLink="https://person-i-saw.vercel.app"
         projectTitle="Person I Saw"
         view={t("view")}
-        background="bg-[url(src/assets/pBackground3.webp)]"
+        backgroundImage={pBackground3.src}
         projectDescription={t("projectDescription3")}
       >
         <NextIcon /><TailwindIcon /></Project

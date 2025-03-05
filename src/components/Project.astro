@@ -1,6 +1,6 @@
 ---
 import ExternalLinkIcon from "./ExternalLinkIcon.astro";
-const { projectLink, projectTitle, projectDescription, view, background } =
+const { projectLink, projectTitle, projectDescription, view, backgroundImage } =
     Astro.props;
 ---
 
@@ -9,7 +9,8 @@ const { projectLink, projectTitle, projectDescription, view, background } =
         class=`my-7 group relative w-full grid px-2 py-4 sm:p-4 grid-flow-col grid-cols-3 grid-rows-3 items-center bg-cover min-h-80 max-w-2xs sm:min-h-92 sm:min-w-lg rounded-xl`
     >
         <div
-            class=`group-hover:opacity-60 background transition-all duration-500 ease-in-out rounded-xl ${background} absolute bg-cover w-full h-full z-0`
+            class="group-hover:opacity-60 background transition-all duration-500 ease-in-out rounded-xl absolute bg-cover w-full h-full z-0"
+            style={`background-image: url(${backgroundImage});`}
         >
         </div>
         <div
