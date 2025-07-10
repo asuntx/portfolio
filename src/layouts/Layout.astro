@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
 import "@fontsource/quicksand";
-const { currentLocale } = Astro;
-console.log(currentLocale);
+const { currentLocale } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,14 +14,9 @@ console.log(currentLocale);
     <meta name="description" content="Sebastian Figueroa's Portfolio" />
     <title>Portfolio</title>
   </head>
-  <body class="font-body m-0 w-full h-full text-teal-50">
-    <div class="grid place-items-center w-full bg-background">
-      <!-- Change min-w to max-w -->
-      <main
-        class="md:border-l md:border-r md:border-stone-50 max-w-3xl mx-auto"
-      >
-        <slot />
-      </main>
-    </div>
+  <body class="font-body m-0 w-full h-full bg-stone-950 text-teal-50">
+    <main class="max-w-3xl mx-auto">
+      <slot />
+    </main>
   </body>
 </html>

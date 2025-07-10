@@ -8,39 +8,31 @@ const t = useTranslations(lang);
 ---
 
 <header
-  class="header fixed z-30 py-6 sm:px-8 lg:px-10 max-w-3xl rounded-b-xl left-1/2 -translate-x-1/2"
+  class="header bg-navbar backdrop-blur-md fixed z-30 py-6 px-8 lg:px-10 max-w-3xl rounded-b-xl left-1/2 -translate-x-1/2"
 >
-  <div class="flex justify-between px-3 sm:px-0 items-center">
-    <nav class="flex w-full gap-3 sm:gap-6 lg:gap-9">
-      <a
-        class="group/link1 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-        href="#home"
-        aria-label={t("homeLabel")}
-      >
-        <HomeIcon />
-      </a>
-      <a
-        class="group/link2 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-        href="#projects"
-        aria-label={t("projectsLabel")}
-      >
-        <ProjectIcon />
-      </a>
-      <a
-        class="group/link3 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-        href="#contact"
-        aria-label={t("contactLabel")}
-      >
-        <ContactIcon />
-      </a>
-    </nav>
-  </div>
-
-  <style>
-    .header {
-      background: rgba(5, 4, 1, 0.486);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-  </style>
+  <nav
+    class="flex justify-between items-center w-full gap-12 sm:gap-14 lg:gap-9"
+  >
+    <a
+      class="group/link1 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+      href="#home"
+      aria-label={t("homeLabel")}
+    >
+      <HomeIcon />
+    </a>
+    <a
+      class="group/link2 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+      href="#projects"
+      aria-label={t("projectsLabel")}
+    >
+      <ProjectIcon />
+    </a>
+    <a
+      class="group/link3 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
+      href="#contact"
+      aria-label={t("contactLabel")}
+    >
+      <ContactIcon />
+    </a>
+  </nav>
 </header>

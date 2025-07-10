@@ -1,7 +1,6 @@
 ---
 import Navbar from "../../components/Navbar.astro";
 import Hero from "../../components/Hero.astro";
-import About from "../../components/about.astro";
 import Projects from "../../components/Projects.astro";
 import Footer from "../../components/Footer.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -11,6 +10,13 @@ const t = useTranslations(lang);
 ---
 
 <Layout>
+  <div class="lang-switch absolute top-6 right-5">
+    <a
+      href={t("pageLanguage")}
+      class="font-bold text-center flex justify-center items-center"
+      >{t("language")}</a
+    >
+  </div>
   <Navbar
     resumeFile={t("resume-file")}
     hire={t("hire")}
@@ -19,19 +25,6 @@ const t = useTranslations(lang);
     padding="px-2"
   />
   <Hero name={t("name")} imgAlt={t("imgAlt")} />
-  <About>
-    Amante del rock <span class="font-serif">🎸</span> y techie <span
-      class="font-serif">👨‍💻</span
-    >. Me gustan los diseños mininalistas y limpios, cómodo para la mayoría de
-    usuarios, e increibles para sus ojos<span class="font-serif">😌👀.</span> Quiero
-    contribuir al mundo! Checa mi futuro proyecto: <a
-      class="text-teal-500 hover:text-stone-500 transition-colors duration-100 ease-in-out"
-      href="https://github.com/Asunt70/habits-py"
-      target="_blank"
-      rel="noopener noreferrer">habitspy</a
-    > un CLI habit tracker!
-  </About>
-
   <Projects projectsTitle={t("projects-title")} view={t("view")} />
   <Footer
     links={t("links")}

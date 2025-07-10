@@ -12,6 +12,7 @@ body {
   --color-background: #050401;
   --color-primary: #bbb;
   --color-accent: #b2f2bb;
+  --color-navbar: rgba(5, 4, 1, 0.486);
   --color-secondary: #303036;
   --color-text-primary: hsl(0deg 0% 100% / 44%);
   --font-body: "quicksand", sans-serif;
@@ -19,18 +20,18 @@ body {
 }
 
 @keyframes colorChange {
-    0% {
-      background-color: #000b58;
-    }
-    25% {
-      background-color: #003161;
-    }
-    50% {
-      background-color: #006a67;
-    }
-    100% {
-      background-color: #fff4b7;
-    }
+  0% {
+    background-color: #000b58;
+  }
+  25% {
+    background-color: #003161;
+  }
+  50% {
+    background-color: #006a67;
+  }
+  100% {
+    background-color: #fff4b7;
+  }
 }
 
 @keyframes textColorChange {

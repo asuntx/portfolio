@@ -5,12 +5,18 @@ import Projects from "../components/Projects.astro";
 import Footer from "../components/Footer.astro";
 import Layout from "../layouts/Layout.astro";
 import { getLangFromURl, useTranslations } from "../i18n/utils";
-import About from "../components/about.astro";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <Layout>
+  <div class="lang-switch absolute top-[25px] right-5">
+    <a
+      href={t("pageLanguage")}
+      class="font-bold text-center flex justify-center items-center"
+      >{t("language")}</a
+    >
+  </div>
   <Navbar
     resumeFile={t("resume-file")}
     hire={t("hire")}
@@ -19,18 +25,6 @@ const t = useTranslations(lang);
     padding="px-2"
   />
   <Hero name={t("name")} imgAlt={t("imgAlt")} />
-  <About>
-    Rock lover <span class="font-serif">🎸</span> and techie <span
-      class="font-serif">👨‍💻</span
-    >. I like minimal and clean designs, comfy for most users, and awesome to
-    their eyes <span class="font-serif">😌👀.</span> I want to contribute to the
-    world! Check my future project: <a
-      class="text-teal-500 hover:text-stone-500 transition-colors duration-100 ease-in-out"
-      href="https://github.com/Asunt70/habits-py"
-      target="_blank"
-      rel="noopener noreferrer">habitspy</a
-    > the CLI habit tracker!
-  </About>
   <Projects projectsTitle={t("projects-title")} view={t("view")} />
 
   <Footer
