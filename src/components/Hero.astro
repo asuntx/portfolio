@@ -5,8 +5,8 @@ import { Image } from "astro:assets";
 import me from "../assets/me.webp";
 import Links from "./Links.astro";
 import { getLangFromURl, useTranslations } from "../i18n/utils";
-import NextIcon from "./NextIcon.astro";
-import TailwindIcon from "./TailwindIcon.astro";
+import NextIcon from "./icons/NextIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
