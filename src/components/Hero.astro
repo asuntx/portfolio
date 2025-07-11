@@ -7,6 +7,8 @@ import Links from "./Links.astro";
 import { getLangFromURl, useTranslations } from "../i18n/utils";
 import NextIcon from "./icons/NextIcon.astro";
 import TailwindIcon from "./icons/TailwindIcon.astro";
+import PythonIcon from "./icons/PythonIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
@@ -36,8 +38,9 @@ const t = useTranslations(lang);
           <Links resume={t("resume")} resumeFile={t("resume-file")} />
         </div>
         <section class="skills flex gap-3 justify-center">
-          <NextIcon />
+          <ReactIcon />
           <TailwindIcon />
+          <PythonIcon />
         </section>
       </div>
     </header>
