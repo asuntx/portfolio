@@ -7,11 +7,10 @@ body {
 }
 
 @theme {
-  --animate-color: colorChange 5s infinite ease-in-out alternate;
-  --animate-text-color: textColorChange 5s infinite ease-in-out alternate;
-  --color-background: #050401;
+  --animate-background: colorChange 3s infinite ease-in-out alternate;
+  --animate-text: textColorChange 3s infinite ease-in-out alternate;
   --color-primary: #bbb;
-  --color-accent: #b2f2bb;
+  --color-accent: #ff9f34;
   --color-navbar: rgba(5, 4, 1, 0.486);
   --color-secondary: #303036;
   --color-text-primary: hsl(0deg 0% 100% / 44%);
@@ -21,30 +20,30 @@ body {
 
 @keyframes colorChange {
   0% {
-    background-color: #000b58;
+    background-color: #0d00ff; /* electric blue */
   }
   25% {
-    background-color: #003161;
+    background-color: #00e0ff; /* cyan pop */
   }
   50% {
-    background-color: #006a67;
+    background-color: #00ff85; /* neon green */
   }
   100% {
-    background-color: #fff4b7;
+    background-color: #fff200; /* bright yellow */
   }
 }
 
 @keyframes textColorChange {
   0% {
-    color: #ffffff;
+    color: #ffffff; /* white */
   }
   25% {
-    color: #ffffffcb;
+    color: #000000; /* black */
   }
   50% {
-    color: #0c0c0c;
+    color: #000000; /* black */
   }
   100% {
-    color: #000000;
+    color: #1a1a1a; /* dark gray for yellow bg */
   }
 }

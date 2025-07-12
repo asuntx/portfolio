@@ -1,91 +1,14 @@
 ---
-const { links, link1, link2, socials, contact } = Astro.props;
+
 ---
 
-<footer id="contact" class="flex flex-col px-4 mt-20 pb-5">
-  <div class="flex flex-col md:justify-center gap-10 lg:gap-20 lg:flex-row">
-    <ul class="flex flex-col gap-3">
-      <li>
-        <span class="text-text-primary">{links}</span>
-      </li>
-      <li>
-        <a
-          href="#home"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          >{link1}</a
-        >
-      </li>
-      <li>
-        <a
-          href="#projects"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          >{link2}</a
-        >
-      </li>
-    </ul>
-    <ul class="flex flex-col gap-3">
-      <li>
-        <span class="text-text-primary">{socials}</span>
-      </li>
-      <li>
-        <a
-          href="http://github.com/Asunt70"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          >Github</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.linkedin.com/in/sebasti%C3%A1n-figueroa-barco-649981261/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          >Linkedin</a
-        >
-      </li>
-      <li>
-        <a
-          href="http://instagram.com/sebasdaa"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-        >
-          Instagram</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://ko-fi.com/sebastianfigueroa80075"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-        >
-          Ko-fi</a
-        >
-      </li>
-    </ul>
-    <ul class="flex flex-col gap-3">
-      <li>
-        <span class="text-text-primary">{contact}</span>
-      </li>
-      <li>
-        <a
-          href="
-          mailto:sebaj348@gmail.com"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          >sebaj348@gmail.com</a
-        >
-      </li>
-      <li>
-        <a
-          href="http://discord.com/users/asunt_#1191372780797698060"
-          class="hover:text-text-primary transition-all duration-200 ease-in-out"
-          target="_blank"
-          rel="noopener noreferrer">Discord</a
-        >
-      </li>
-    </ul>
-  </div>
+<footer id="contact" class="flex flex-col px-4 mt-20 pb-5 font-bold">
+  <span>Sebastián Figueroa - <span id="current-year"></span></span>
 </footer>
+
+<script>
+  const yearElement = document.getElementById("current-year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear().toString();
+  }
+</script>

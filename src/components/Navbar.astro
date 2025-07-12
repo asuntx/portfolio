@@ -1,38 +1,69 @@
 ---
 import { getLangFromURl, useTranslations } from "../i18n/utils";
-import HomeIcon from "./icons/HomeIcon.astro";
-import ProjectIcon from "./icons/ProjectIcon.astro";
-import ContactIcon from "./icons/ContactIcon.astro";
+import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+import DiscordIcon from "./icons/DiscordIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import GithubIcon from "./icons/GithubIcon.astro";
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
 
 <header
-  class="header bg-navbar backdrop-blur-md fixed z-30 py-6 px-8 lg:px-10 max-w-3xl rounded-b-xl left-1/2 -translate-x-1/2"
+  class="header flex items-center gap-2 sm:gap-5 w-[98%] bg-navbar mt-5 border border-stone-900 rounded-xl backdrop-blur-md fixed z-30 p-3 sm:px-8 lg:px-10 rounded-b-xl left-1/2 -translate-x-1/2"
 >
+  <span class="font-extrabold">asuntx</span>
+
   <nav
     class="flex justify-between items-center w-full gap-12 sm:gap-14 lg:gap-16"
   >
     <a
-      class="group/link1 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-      href="#home"
-      aria-label={t("homeLabel")}
+      class="flex items-center gap-0.5 py-0.5 px-2 rounded-xl border border-stone-700 transition duration-200 ease-in-out hover:bg-stone-800/30"
+      href="https://medium.com/@sebaj348"
+      target="_blank"
+      rel="noopener noreferrer"
     >
-      <HomeIcon />
+      <span>Blog</span>
+      <ExternalLinkIcon width="15" height="15" />
     </a>
-    <a
-      class="group/link2 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-      href="#projects"
-      aria-label={t("projectsLabel")}
-    >
-      <ProjectIcon />
-    </a>
-    <a
-      class="group/link3 font-semibold hover:text-text transition-colors duration-150 ease-in-out"
-      href="#contact"
-      aria-label={t("contactLabel")}
-    >
-      <ContactIcon />
-    </a>
+    <div class="right-side flex gap-2 sm:gap-2.5">
+      <a
+        class="flex items-center sm:py-1 sm:px-2 transition duration-200 ease-in-out hover:bg-stone-800 rounded-sm"
+        href="https://www.linkedin.com/in/figueroasebasda/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <LinkedinIcon /></a
+      >
+      <a
+        class="flex items-center sm:py-1 sm:px-2 transition duration-200 ease-in-out hover:bg-stone-800 rounded-sm"
+        href="http://github.com/asuntx"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <GithubIcon />
+      </a>
+      <a
+        class="flex items-center sm:p-1 transition duration-200 ease-in-out hover:bg-stone-800 rounded-sm"
+        href="https://www.instagram.com/sebasdaa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <InstagramIcon width="30" height="35" />
+      </a>
+      <a
+        class="flex items-center sm:py-1 sm:px-2 transition duration-200 ease-in-out hover:bg-stone-800 rounded-sm"
+        href="http://discord.com/users/1191372780797698060"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <DiscordIcon width="20" height="25" />
+      </a>
+      <a
+        href={t("pageLanguage")}
+        class="font-bold ml-2 text-center flex justify-center items-center transition duration-200 ease-in-out hover:text-stone-400"
+        >{t("language")}</a
+      >
+    </div>
   </nav>
 </header>

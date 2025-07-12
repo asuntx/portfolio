@@ -1,5 +1,4 @@
 ---
-// Ensure that the imgAlt and name props are passed correctly
 const { imgAlt, name } = Astro.props;
 import { Image } from "astro:assets";
 import me from "../assets/me.webp";
@@ -13,7 +12,7 @@ const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="home" class="flex justify-center px-2 sm:px-4 pb-5 pt-24">
+<section id="home" class="flex justify-center px-2 sm:px-4 pb-5 pt-28">
   <article
     class="bg-[url(/src/assets/background.webp)] w-full md:px-4 lg:w-[90%] px-2 py-5 lg:py-14 bg-cover bg-no-repeat rounded-lg"
   >
@@ -38,9 +37,9 @@ const t = useTranslations(lang);
           <Links resume={t("resume")} resumeFile={t("resume-file")} />
         </div>
         <section class="skills flex gap-3 justify-center">
-          <ReactIcon />
-          <TailwindIcon />
-          <PythonIcon />
+          <ReactIcon width="50" height="50" />
+          <TailwindIcon width="50" height="50" />
+          <PythonIcon width="50" height="50" />
         </section>
       </div>
     </header>

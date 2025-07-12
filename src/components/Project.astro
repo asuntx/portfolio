@@ -1,49 +1,31 @@
 ---
 import ExternalLinkIcon from "./icons/ExternalLinkIcon.astro";
-const { projectLink, projectTitle, projectDescription, view, backgroundImage } =
+import GithubIcon from "./icons/GithubIcon.astro";
+const { projectLink, projectTitle, projectDescription, projectRepo, grid } =
   Astro.props;
 ---
 
-<a href={projectLink} target="_blank" rel="noopener noreferrer">
-  <div
-    class=`my-7 group relative w-full grid px-2 py-4 sm:p-4 grid-flow-col grid-cols-3 grid-rows-3 items-center bg-cover min-h-80 max-w-2xs sm:min-h-92 sm:min-w-lg rounded-xl`
-  >
-    <div
-      class="group-hover:opacity-60 background transition-all duration-500 ease-in-out rounded-xl absolute bg-cover w-full h-full z-0"
-      style={`background-image: url(${backgroundImage});`}
-    >
+<div
+  class=`container ${grid} w-full p-4 border transition duration-200 ease-in-out hover:bg-stone-800/30 border-stone-800 bg-stone-900/20 shadow-xl backdrop-blur-md rounded-lg text-amber-50`
+>
+  <div class="header flex justify-between items-center w-full">
+    <div class="flex gap-3">
+      <a
+        href={projectLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group flex items-center gap-1.5 text-lg transition duration-200 ease-in-out hover:underline decoration-accent"
+        ><span
+          class="transition duration-200 ease-in-out group-hover:text-accent"
+          >{projectTitle}</span
+        >
+        <ExternalLinkIcon width="15" height="15" />
+      </a>
     </div>
-    <div
-      class="group-hover:opacity-100 opacity-0 transition-opacity duration-500 ease-in-out col-span-3 z-20"
-    >
-      <slot />
-    </div>
-    <div
-      class="text-xl font-bold col-span-3 row-start-2 flex justify-center z-20"
-    >
-      <span
-        class="group-hover:opacity-100 flex items-center gap-1 text-amber-50 opacity-0 transition-opacity duration-500 ease-in-out"
-        ><span>{view}</span>
-        <ExternalLinkIcon />
-      </span>
-      <span
-        class="group-hover:opacity-0 transition-opacity duration-500 ease-out absolute"
-        >{projectTitle}</span
-      >
-    </div>
-    <div
-      class="group-hover:opacity-100 text-center text-amber-50 opacity-0 transition-opacity duration-500 ease-in-out col-span-3 row-start-3 z-20"
-    >
-      <p>{projectDescription}</p>
-    </div>
+    <a href={projectRepo} target="_blank" rel="noopener noreferrer">
+      <GithubIcon />
+    </a>
   </div>
-</a>
-
-<style>
-  .background {
-    background-size: 100%;
-  }
-  .group:hover .background {
-    background-size: 108%;
-  }
-</style>
+  <article class="mt-2 pl-2">{projectDescription}</article>
+  <div class="stack flex gap-1.5 items-center mt-3 text-xs"><slot /></div>
+</div>

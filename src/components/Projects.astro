@@ -1,47 +1,62 @@
 ---
 import { getLangFromURl, useTranslations } from "../i18n/utils";
 import Project from "./Project.astro";
-import NextIcon from "./icons/NextIcon.astro";
-import TailwindIcon from "./icons/TailwindIcon.astro";
-import pBackground1 from "../assets/pBackground1.webp";
-import pBackground2 from "../assets/pBackground2.webp";
-import pBackground3 from "../assets/pBackground3.webp";
+import PythonStack from "./stackComponents/PythonStack.astro";
+import NextjsStack from "./stackComponents/NextjsStack.astro";
+import ReactStack from "./stackComponents/ReactStack.astro";
+import SqliteStack from "./stackComponents/SqliteStack.astro";
+import TailwindStack from "./stackComponents/TailwindStack.astro";
 const { projectsTitle, view } = Astro.props;
 const lang = getLangFromURl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section id="projects" class="pt-20 px-2 sm:px-4">
-  <h2 class="font-bold text-2xl">{projectsTitle}</h2>
-  <ul class="flex justify-center text-background">
-    <li>
-      <Project
-        projectLink="https://uptaeb-website.vercel.app"
-        projectTitle="Uptaeb Website"
-        view={t("view")}
-        backgroundImage={pBackground1.src}
-        projectDescription={t("projectDescription1")}
+<section id="projects" class="pt-10 px-2 sm:px-4">
+  <h1 class="mb-10 font-bold text-2xl">{projectsTitle}</h1>
+  <ul
+    class="flex flex-col gap-4 sm:grid sm:grid-cols-4 sm:grid-rows-6 sm:gap-2"
+  >
+    <Project
+      grid="sm:col-span-2 sm:row-span-3"
+      projectLink="https://github.com/asuntx/habitpy"
+      projectTitle="Habitpy"
+      projectRepo="https://github.com/asuntx/habitpy"
+      projectDescription={t("projectDescription1")}
+      ><PythonStack /><SqliteStack /></Project
+    >
+    <Project
+      grid="sm:col-span-2 sm:row-span-3 sm:col-start-3 "
+      projectLink="https://uptaeb-website.vercel.app"
+      projectTitle="UPTAEB Web"
+      projectRepo="https://github.com/asuntx"
+      projectDescription={t("projectDescription2")}
+    >
+      <NextjsStack />
+      <TailwindStack />
+    </Project>
+
+    <Project
+      grid="sm:col-span-2 sm:row-span-3 sm:row-start-4"
+      projectLink="https://infinix-blog.vercel.app"
+      projectTitle="Infinix Blog"
+      projectRepo="https://github.com/asuntx/infinix-blog"
+      projectDescription={t("projectDescription3")}
+    >
+      <NextjsStack />
+      <TailwindStack />
+    </Project>
+    <Project
+      grid="sm:col-span-2 sm:row-span-3 sm:col-start-3 sm:row-start-4"
+      projectLink="https://github.com/asuntx"
+      projectTitle={t("projectTitleComing")}
+      projectRepo="https://github.com/asuntx/"
+      projectDescription={t("projectDescription4")}
+    >
+      <div
+        class="flex items-center animate-background py-1.5 px-1.5 rounded-xl"
       >
-        <NextIcon /></Project
-      >
-      <Project
-        projectLink="https://infinix-blog.vercel.app"
-        projectTitle="Infinix Blog"
-        view={t("view")}
-        backgroundImage={pBackground2.src}
-        projectDescription={t("projectDescription2")}
-      >
-        <NextIcon />
-      </Project>
-      <Project
-        projectLink="https://person-i-saw.vercel.app"
-        projectTitle="Person I Saw"
-        view={t("view")}
-        backgroundImage={pBackground3.src}
-        projectDescription={t("projectDescription3")}
-      >
-        <NextIcon /><TailwindIcon /></Project
-      >
-    </li>
+        <span class="animate-text">{t("ComingMessage")}</span>
+      </div>
+    </Project>
   </ul>
 </section>
