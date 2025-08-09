@@ -5,8 +5,9 @@ Welcome to my personal portfolio website! This project showcases who I am, what 
 ## 🛠️ Tech Stack
 
 - Astro
-- Optional: Tailwind
+- Tailwind
 - Deployed on [Vercel]
 
 ## 📸 Preview
-![image](https://github.com/user-attachments/assets/f71d66e5-4fa0-4d5e-b564-e058bb1d31b0)
+<img width="1308" height="768" alt="image" src="https://github.com/user-attachments/assets/1add6af6-80a5-48df-a6ff-77371ea6e544" />
+
