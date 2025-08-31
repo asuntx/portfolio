@@ -4,6 +4,8 @@ import Project from "./Project.astro";
 import PythonStack from "./stackComponents/PythonStack.astro";
 import NextjsStack from "./stackComponents/NextjsStack.astro";
 import ReactStack from "./stackComponents/ReactStack.astro";
+import DockerStack from "./stackComponents/DockerStack.astro"
+import GoStack from "./stackComponents/GoStack.astro"
 import SqliteStack from "./stackComponents/SqliteStack.astro";
 import TailwindStack from "./stackComponents/TailwindStack.astro";
 const { projectsTitle, view } = Astro.props;
@@ -47,16 +49,14 @@ const t = useTranslations(lang);
     </Project>
     <Project
       grid="sm:col-span-2 sm:row-span-3 sm:col-start-3 sm:row-start-4"
-      projectLink="https://github.com/asuntx"
-      projectTitle={t("projectTitleComing")}
-      projectRepo="https://github.com/asuntx/"
+      projectLink="https://github.com/escuadron-404/red404"
+      projectTitle="red404"
+      projectRepo="https://github.com/escuadron-404/red404"
       projectDescription={t("projectDescription4")}
-    >
-      <div
-        class="flex items-center animate-background py-1.5 px-1.5 rounded-xl"
       >
-        <span class="animate-text">{t("ComingMessage")}</span>
-      </div>
+      <ReactStack/>
+      <GoStack/>
+      <DockerStack/>
     </Project>
   </ul>
 </section>

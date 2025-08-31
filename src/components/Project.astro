@@ -27,5 +27,7 @@ const { projectLink, projectTitle, projectDescription, projectRepo, grid } =
     </a>
   </div>
   <article class="mt-2 pl-2">{projectDescription}</article>
-  <div class="stack flex gap-1.5 items-center mt-3 text-xs"><slot /></div>
+  <div class="stack flex flex-wrap gap-1.5 items-center mt-3 text-xs">
+      <slot />
+  </div>
 </div>
