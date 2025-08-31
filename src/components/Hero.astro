@@ -2,6 +2,7 @@
 const { imgAlt, name } = Astro.props;
 import { Image } from "astro:assets";
 import me from "../assets/me.webp";
+import background from "../assets/background.webp"
 import Links from "./Links.astro";
 import { getLangFromURl, useTranslations } from "../i18n/utils";
 import NextIcon from "./icons/NextIcon.astro";
@@ -13,16 +14,17 @@ const t = useTranslations(lang);
 ---
 
 <section id="home" class="flex justify-center px-2 sm:px-4 pb-5 pt-28">
-  <article
-    class="bg-[url(/src/assets/background.webp)] w-full md:px-4 lg:w-[90%] px-2 py-5 lg:py-14 bg-cover bg-no-repeat rounded-lg"
-  >
+    <article
+    class="relative w-full lg:w-[90%] rounded-lg"
+    >
+    <Image src={background} alt="background Image" class="w-full rounded-lg absolute h-full -z-10"/>
     <header class="flex flex-col items-center md:flex-row gap-5">
-      <Image
-        class="w-46 h-46 rounded-full object-cover"
+        <Image
+        class="w-46 h-46 m-4 rounded-full object-cover"
         src={me}
         alt={imgAlt}
-      />
-      <div class="flex flex-col justify-center md:w-[60%]">
+        />
+      <div class="px-2 py-2 md:px-4 lg:py-14 flex flex-col justify-center md:w-[60%]">
         <div class="flex flex-col justify-center gap-2 mb-6">
           <h2
             class="font-mono font-bold text-2xl text-center text-transparent bg-gradient-to-t from-stone-700 to-stone-500 bg-clip-text"
